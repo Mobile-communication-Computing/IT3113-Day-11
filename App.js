@@ -23,6 +23,11 @@ export default function App() {
             component={Home}
             options={{ title: "Welcome" }}
           />
+          <Stack.Screen
+            name="aboutus"
+            component={AboutUs}
+            options={{ title: "About Us" }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
