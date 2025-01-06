@@ -28,6 +28,11 @@ export default function App() {
             component={AboutUs}
             options={{ title: "About Us" }}
           />
+          <Stack.Screen
+            name="contact"
+            component={ContactUs}
+            options={{ title: "Contact Us" }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
