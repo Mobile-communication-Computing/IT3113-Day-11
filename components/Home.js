@@ -1,15 +1,16 @@
 import { useNavigation } from "@react-navigation/native";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import { PaperProvider, Text, Divider, Button } from "react-native-paper";
+
 export default function Home() {
   const navigation = useNavigation();
   return (
     <PaperProvider>
-      <ScrollView contentContainerStyle={StyleSheet.scrollView}>
-        <View style={StyleSheet.container}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <View style={styles.container}>
           <Text variant="headlineLarge">Headline Large</Text>
           <Divider />
-          <Text variant="bodyMedium" style={StyleSheet.body}>
+          <Text variant="bodyMedium" style={styles.body}>
             Video provides a powerful way to help you prove your point. When you
             click Online Video, you can paste in the embed code for the video
             you want to add. You can also type a keyword to search online for
@@ -61,7 +62,7 @@ export default function Home() {
           <Button
             icon="camera"
             mode="outlined"
-            onPress={() => navigation.navigate("contact")}
+            onPress={() => navigation.navigate("aboutus")}
           >
             About Us
           </Button>
@@ -70,6 +71,7 @@ export default function Home() {
     </PaperProvider>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: "column",
