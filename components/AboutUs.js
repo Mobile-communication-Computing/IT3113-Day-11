@@ -1,19 +1,18 @@
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, View, ScrollView, Image } from "react-native";
 import { PaperProvider, Text, Divider, Button } from "react-native-paper";
-
 export default function AboutUs() {
   const navigation = useNavigation();
   return (
     <PaperProvider>
-      <ScrollView contentContainerStyle={StyleSheet.ScrollView}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.container}>
           <Text variant="headlineLarge">History</Text>
           <Divider />
-          <View style={Styles.imagepad}>
+          <View style={styles.imagepad}>
             <Image
-              source={require("..assets/uovlogo.png")}
-              style={styles.Image}
+              source={require("../assets/uovlogo.png")}
+              style={styles.image}
             />
           </View>
           <Text variant="bodyMedium" style={styles.body}>
@@ -53,9 +52,9 @@ export default function AboutUs() {
             mode="outlined"
             onPress={() => navigation.push("aboutus")}
           >
-            call again
+            call agin
           </Button>
-          <Button mode="outlined" onPress={() => navigation.popTo(home)}>
+          <Button mode="outlined" onPress={() => navigation.popTo("home")}>
             Go to Home
           </Button>
           <Button mode="outlined" onPress={() => navigation.popToTop()}>
@@ -69,6 +68,7 @@ export default function AboutUs() {
     </PaperProvider>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: "column",
